@@ -1,0 +1,39 @@
+{
+  "name": "@automation-ai-labs/mcp-wait",
+  "version": "1.0.3",
+  "description": "A simple MCP server for waiting/pausing execution",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "mcp-wait": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "fastmcp dev src/index.ts",
+    "inspect": "fastmcp inspect src/index.ts",
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "wait",
+    "sleep",
+    "timeout",
+    "fastmcp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastmcp": "^1.20.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "shx": "^0.3.4",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.2"
+  }
+}
