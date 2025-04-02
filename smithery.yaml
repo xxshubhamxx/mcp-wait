@@ -1,0 +1,38 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      transportType:
+        type: string
+        default: stdio
+        description: Transport type for the MCP server, e.g., 'stdio' or 'sse'.
+      port:
+        type: number
+        default: 8080
+        description: Port on which to run the server when using SSE transport.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => { 
+      // Use 'npm run build' to prepare the build, then run the built artifact.
+      // We set environment variables based on configuration.
+      // If transportType is 'sse', we include PORT and TRANSPORT_TYPE; for 'stdio', leave them as is.
+      const env = Object.assign({}, process.env);
+      env.TRANSPORT_TYPE = config.transportType || 'stdio';
+      if(env.TRANSPORT_TYPE === 'sse'){
+        env.PORT = config.port ? config.port.toString() : '8080';
+      }
+      // Command to start the server with built artifact
+      return {
+        command: 'node',
+        args: ['dist/index.js'],
+        env
+      };
+    }
+  exampleConfig:
+    transportType: stdio
+    port: 8080

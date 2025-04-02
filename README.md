@@ -1,4 +1,5 @@
 # MCP-Wait
+[![smithery badge](https://smithery.ai/badge/@automation-ai-labs/mcp-wait)](https://smithery.ai/server/@automation-ai-labs/mcp-wait)
 
 A simple MCP server that provides waiting functionality to pause until other tasks finish.
 
@@ -31,6 +32,15 @@ To use with Claude Desktop, add the following to your configuration:
 
 ## Installation
 
+### Installing via Smithery
+
+To install Wait for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@automation-ai-labs/mcp-wait):
+
+```bash
+npx -y @smithery/cli install @automation-ai-labs/mcp-wait --client claude
+```
+
+### Manual Installation
 ```bash
 npm install
 ```
