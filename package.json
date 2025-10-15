@@ -1,5 +1,5 @@
 {
-  "name": "@automation-ai-labs/mcp-wait",
+  "name": "shubham-garg/mcp-wait",
   "version": "1.0.3",
   "description": "A simple MCP server for waiting/pausing execution",
   "private": false,
