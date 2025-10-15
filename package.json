@@ -5,7 +5,7 @@
   "private": false,
   "type": "module",
   "bin": {
-    "mcp-wait": "./dist/index.js"
+    "mcp-wait": "dist/index.js"
   },
   "files": [
     "dist"
@@ -35,5 +35,14 @@
     "shx": "^0.3.4",
     "tsx": "^4.7.0",
     "typescript": "^5.4.2"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxshubhamxx/mcp-wait.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xxshubhamxx/mcp-wait/issues"
+  },
+  "homepage": "https://github.com/xxshubhamxx/mcp-wait#readme"
 }
