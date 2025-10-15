@@ -1,5 +1,5 @@
 {
-  "name": "shubham-garg/mcp-wait",
+  "name": "mcp-wait",
   "version": "1.0.3",
   "description": "A simple MCP server for waiting/pausing execution",
   "private": false,
